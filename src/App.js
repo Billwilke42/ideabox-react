@@ -1,29 +1,29 @@
 import React, { Component } from 'react';
 import './App.css';
-import IdeaForm from './IdeaForm'
-import IdeaContainer from './IdeaContainer'
+import IdeaForm from './IdeaForm';
+import IdeaContainer from './IdeaContainer';
 
 class App extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       ideas: []
-    }
+    };
   }
 
   addIdea = (idea) => {
-    const newIdea = {...idea, id: Date.now()}
-    const ideas = [...this.state.ideas, newIdea]
-    this.setState({ideas})
+    const newIdea = {...idea, id: Date.now()};
+    const ideas = [...this.state.ideas, newIdea];
+    this.setState({ ideas });
   }
 
   removeIdea = (id) => {
-    const ideas = this.state.ideas.filter(idea => id !== idea.id)
-    this.setState({ ideas })
+    const ideas = this.state.ideas.filter(idea => id !== idea.id);
+    this.setState({ ideas });
   }
 
   render() {
-    const { ideas } = this.state
+    const { ideas } = this.state;
     return (
       <div className="App">
         <h3>IdeaBox</h3>

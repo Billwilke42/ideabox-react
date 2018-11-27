@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Card = ({ title, body, id, removeIdea }) => {
   return(
@@ -7,7 +7,7 @@ const Card = ({ title, body, id, removeIdea }) => {
       <p>{body}</p>
       <button onClick={() => removeIdea(id)}>X</button>
     </div>
-  )
+  );
 }
 
-export default Card
+export default Card;

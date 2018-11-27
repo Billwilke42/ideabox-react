@@ -1,34 +1,34 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class IdeaForm extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       title: '',
       body: ''
-    }
+    };
   }
 
   handleInputChange = (e) => {
-    const { name, value } = e.target
-    this.setState({ [name]: value })
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
   }
 
   resetState = () => {
     this.setState({
       title: '',
       body: ''
-    })
+    });
   }
 
   handleSubmit = (e) => {
-    e.preventDefault()
-    this.props.addIdea(this.state)
-    this.resetState()
+    e.preventDefault();
+    this.props.addIdea(this.state);
+    this.resetState();
   }
 
   render() {
-    const { title, body } = this.state
+    const { title, body } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
         <input 
@@ -47,6 +47,6 @@ export default class IdeaForm extends Component {
          />
         <button>Add Idea</button>
       </form>
-    )
+    );
   }
 }
